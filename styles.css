@@ -289,14 +289,14 @@ section {
 
 .badge-5 {
     top: 50%;
-    left: -2.5rem;
+    left: -4rem;
     background: linear-gradient(135deg, var(--accent-green), var(--accent-purple));
     animation-delay: 4s;
 }
 
 .badge-6 {
     top: 50%;
-    right: -2.5rem;
+    right: -4rem;
     background: linear-gradient(135deg, var(--accent-purple), var(--accent-green));
     animation-delay: 5s;
 }
