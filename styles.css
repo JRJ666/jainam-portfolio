@@ -61,11 +61,11 @@ html {
 
 /* Navigation */
 #navigation {
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+    position: relative; /* or just remove the position property */
+    top: auto;
+    left: auto;
+    width: 100%; /* optional */
+    z-index: auto; /* optional */
     transition: var(--transition);
     padding: 1rem 0;
 }
