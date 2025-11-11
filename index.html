@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jainam Jagani - Data Engineer & AI/ML Engineer</title>
     <meta name="description" content="Jainam Jagani - Data Engineer and AI/ML Engineer specializing in data pipelines, machine learning, and scalable engineering solutions.">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Animated Background Canvas -->
     <canvas id="animatedBackground"></canvas>
-    
+
     <!-- Navigation -->
     <nav id="navigation">
         <div class="nav-container">
@@ -25,48 +25,43 @@
                 <div class="logo" onclick="scrollToSection('home')">JJ</div>
                 
                 <div class="nav-links">
-                    <button onclick="scrollToSection('home')" data-testid="nav-home">Home</button>
-                    <button onclick="scrollToSection('about')" data-testid="nav-about">About</button>
-                    <button onclick="scrollToSection('projects')" data-testid="nav-projects">Projects</button>
-                    <button onclick="scrollToSection('skills')" data-testid="nav-skills">Skills</button>
-                    <button onclick="scrollToSection('contact')" data-testid="nav-contact">Contact</button>
+                    <button onclick="scrollToSection('home')">Home</button>
+                    <button onclick="scrollToSection('about')">About</button>
+                    <button onclick="scrollToSection('projects')">Projects</button>
+                    <button onclick="scrollToSection('skills')">Skills</button>
+                    <button onclick="scrollToSection('contact')">Contact</button>
                 </div>
                 
                 <div class="nav-actions">
-                    <button class="theme-toggle" onclick="toggleTheme()" data-testid="theme-toggle">
+                    <button class="theme-toggle" onclick="toggleTheme()">
                         <i data-lucide="moon"></i>
                     </button>
-                    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" data-testid="mobile-menu-toggle">
+                    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
                         <i data-lucide="menu"></i>
                     </button>
                 </div>
             </div>
-            
+
             <!-- Mobile Menu -->
             <div class="mobile-menu" id="mobileMenu">
-                <button onclick="scrollToSection('home')" data-testid="mobile-nav-home">Home</button>
-                <button onclick="scrollToSection('about')" data-testid="mobile-nav-about">About</button>
-                <button onclick="scrollToSection('projects')" data-testid="mobile-nav-projects">Projects</button>
-                <button onclick="scrollToSection('skills')" data-testid="mobile-nav-skills">Skills</button>
-                <button onclick="scrollToSection('contact')" data-testid="mobile-nav-contact">Contact</button>
+                <button onclick="scrollToSection('home')">Home</button>
+                <button onclick="scrollToSection('about')">About</button>
+                <button onclick="scrollToSection('projects')">Projects</button>
+                <button onclick="scrollToSection('skills')">Skills</button>
+                <button onclick="scrollToSection('contact')">Contact</button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section" data-testid="hero-section">
+    <section id="home" class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <!-- Profile photo with floating tech badges -->
+                <!-- Profile photo with floating badges -->
                 <div class="profile-container">
                     <div class="profile-image-container">
-                        <img src="Potrait.jpg" 
-                             alt="Jainam Jagani - Professional Headshot" 
-                             class="profile-image"
-                             data-testid="profile-image">
+                        <img src="Potrait.jpg" alt="Jainam Jagani - Professional Headshot" class="profile-image">
                     </div>
-                    
-                    <!-- Floating skill badges -->
                     <div class="floating-badge badge-1">Python</div>
                     <div class="floating-badge badge-2">DataBricks</div>
                     <div class="floating-badge badge-3">SQL</div>
@@ -75,100 +70,35 @@
                     <div class="floating-badge badge-6">PySpark</div>
                 </div>
 
-                <h1 class="hero-title" data-testid="hero-title">
+                <h1 class="hero-title">
                     <span class="name-first">Jainam</span> 
                     <span class="name-last">Jagani</span>
                 </h1>
-                
-                <h2 class="hero-subtitle" data-testid="hero-subtitle">
-                    Data Engineer & AI/ML Engineer
-                </h2>
-                
-                <p class="hero-tagline" data-testid="hero-tagline">
-                    Transforming data into insights with AI, ML, and scalable engineering
-                </p>
-                
+                <h2 class="hero-subtitle">Data Engineer & AI/ML Engineer</h2>
+                <p class="hero-tagline">Transforming data into insights with AI, ML, and scalable engineering</p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="scrollToSection('projects')" data-testid="button-view-projects">
-                        View Projects
-                    </button>
-                    <button class="btn btn-outline" onclick="scrollToSection('contact')" data-testid="button-get-in-touch">
-                        Get In Touch
-                    </button>
+                    <button class="btn btn-primary" onclick="scrollToSection('projects')">View Projects</button>
+                    <button class="btn btn-outline" onclick="scrollToSection('contact')">Get In Touch</button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section" data-testid="about-section">
+    <section id="about" class="about-section">
         <div class="container">
-            <h2 class="section-title" data-testid="about-title">About Me</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-grid">
                 <div class="about-content">
-                    <p class="about-text" data-testid="about-description-1">
-                        I am <strong>Jainam Jagani</strong>, a Data Engineer and AI/ML Engineer with a Master's in 
-                        <strong class="accent-blue">Data Analytical Engineering</strong> from <strong>George Mason University</strong>. 
-                        As a <strong class="accent-green">first-generation college graduate</strong>, I am passionate about leveraging data to solve real-world challenges.
+                    <p>I am <strong>Jainam Jagani</strong>, a Data Engineer and AI/ML Engineer with a Master's in 
+                        <strong>Data Analytical Engineering</strong> from <strong>George Mason University</strong>. 
+                        As a first-generation college graduate, I am passionate about leveraging data to solve real-world challenges.
                     </p>
-                    <p class="about-text" data-testid="about-description-2">
-                        Results-driven Data Engineer with 4 years of experience in designing and implementing . <strong class="accent-purple">scalable data pipelines, cloud-based data warehouses, and 
-                        ETL work flows. </strong>, Skilled in Python, SQL, and PySpark with hands-on expertise across Azure and AWS platforms, delivering efficient, reliable, and 
-                        high-quality data solutions to support business intelligence and analytics
-                    </p>
+                    <p>Results-driven Data Engineer with 4 years of experience designing and implementing <strong>scalable data pipelines, cloud-based data warehouses, and ETL workflows</strong>. Skilled in Python, SQL, and PySpark across Azure and AWS platforms, delivering efficient, reliable, and high-quality data solutions.</p>
                     <div class="social-links">
-                        <a href="https://github.com/JRJ666" class="social-link" data-testid="link-github" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/jainam-jagani" class="social-link" data-testid="link-linkedin" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="linkedin"></i>
-                        </a>
-                        <a href="mailto:jjagani666@gmail.com" class="social-link" data-testid="link-email">
-                            <i data-lucide="mail"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Experience Timeline -->
-                <div class="experience-section">
-                    <h3 class="experience-title" data-testid="experience-title">Work Experience</h3>
-                    
-                    <div class="timeline">
-                        <div class="timeline-item" data-testid="experience-item-1">
-                            <div class="timeline-dot accent-blue"></div>
-                            <div class="timeline-content">
-                                <h4>Data Engineer</h4>
-                                <p class="company">Freddie Mac • McLean, VA • Aug 2024 – Present</p>
-                                <ul class="description">
-                                    <li>Modernized Freddie Mac’s Enterprise Data Lake integrating mortgage origination, servicing, and capital markets into a cloud platform using AWS (S3, Glue, Redshift) and Snowflake.</li>
-                                    <li>Partnered with data architects and product owners to create source-to-target mappings for 25+ legacy data sources.</li>
-                                    <li>Designed and optimized ETL pipelines in Apache Airflow and AWS Glue, reducing data processing time from 48 hours to 6 hours.</li>
-                                    <li>Performed data profiling, validation, and reconciliation using Python and SQL, fixing 3,000+ inconsistencies during migration from Oracle and Teradata to Snowflake.</li>
-                                    <li>Implemented a data quality framework using Great Expectations and AWS Glue Data Catalog, improving reliability of critical datasets by 30%.</li>
-                                    <li>Built Tableau dashboards to monitor data ingestion and quality metrics, reducing manual monitoring by 40%.</li>
-                                    <li>Maintained metadata and data lineage in Collibra and Confluence, ensuring FHFA and SOX compliance.</li>
-                                    <li>Collaborated in Agile sprints, achieving 98% on-time release across project cycles.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item" data-testid="experience-item-2">
-                            <div class="timeline-dot accent-purple"></div>
-                            <div class="timeline-content">
-                                <h4>Data Engineer</h4>
-                                <p class="company">DMI Finance • India • Jul 2020 – Dec 2022</p>
-                                <ul class="description">
-                                    <li>Built a cloud-based MSME Loan Data Warehouse on Azure Synapse Analytics, improving data accessibility and reporting speed by 40%.</li>
-                                    <li>Developed automated ETL pipelines in Azure Databricks using PySpark, processing 2M+ loan transactions daily and reducing manual handling by 60%.</li>
-                                    <li>Set up Azure Data Factory workflows to transfer data from on-premise SQL Server and partner APIs into Azure Data Lake, ensuring consistency and traceability.</li>
-                                    <li>Designed fact and dimension models in Synapse for disbursement, repayment, and portfolio analysis, reducing report generation time by 35%.</li>
-                                    <li>Orchestrated daily ETL jobs with Apache Airflow, automating 40+ workflows and maintaining 99% uptime.</li>
-                                    <li>Introduced a data quality layer with SQL and Great Expectations, reducing financial reporting discrepancies by 45%.</li>
-                                    <li>Created targeted data marts and Power BI dashboards, enabling insights into MSME loan performance and reducing manual reporting from 6 hours to under 1 hour.</li>
-                                    <li>Implemented CI/CD pipelines in Azure DevOps with Git, automating version control and Databricks notebook deployments, improving release reliability and shortening delivery cycles by 50%.</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <a href="https://github.com/JRJ666" target="_blank" rel="noopener noreferrer"><i data-lucide="github"></i></a>
+                        <a href="https://linkedin.com/in/jainam-jagani" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
+                        <a href="mailto:jjagani666@gmail.com"><i data-lucide="mail"></i></a>
                     </div>
                 </div>
             </div>
@@ -176,234 +106,57 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section" data-testid="projects-section">
+    <section id="projects" class="projects-section">
         <div class="container">
-            <h2 class="section-title" data-testid="projects-title">Featured Projects</h2>
-            
+            <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
-                <div class="project-card" data-testid="project-card-1">
-                    <div class="project-header">
-                        <i data-lucide="heart" class="project-icon accent-green"></i>
-                        <h3>HCV Prediction Model</h3>
-                    </div>
-                    <p class="project-description">Built a predictive model to classify Hepatitis C Virus progression stages using Random Forest, KNN, and Logistic Regression.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag purple">R</span>
-                        <span class="tech-tag green">Random Forest</span>
-                        <span class="tech-tag blue">ML</span>
-                    </div>
-                    <div class="project-achievement">96% Accuracy Achieved</div>
+                <div class="project-card">
+                    <h3>HCV Prediction Model</h3>
+                    <p>Built predictive models for Hepatitis C Virus stages using Random Forest, KNN, and Logistic Regression.</p>
                 </div>
-
-                <div class="project-card" data-testid="project-card-2">
-                    <div class="project-header">
-                        <i data-lucide="trending-up" class="project-icon accent-blue"></i>
-                        <h3>NYPD Crime Analytics</h3>
-                    </div>
-                    <p class="project-description">Processed 112K+ arrest records using PySpark and NoSQL, developing ML models for crime category prediction.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag purple">PySpark</span>
-                        <span class="tech-tag green">Big Data</span>
-                        <span class="tech-tag blue">NoSQL</span>
-                    </div>
-                    <div class="project-achievement">90.74% Prediction Accuracy</div>
+                <div class="project-card">
+                    <h3>NYPD Crime Analytics</h3>
+                    <p>Processed 112K+ arrest records using PySpark and NoSQL, developing ML models for crime prediction.</p>
                 </div>
-
-                <div class="project-card" data-testid="project-card-3">
-                    <div class="project-header">
-                        <i data-lucide="utensils" class="project-icon accent-purple"></i>
-                        <h3>DC Food Safety Analytics</h3>
-                    </div>
-                    <p class="project-description">Analyzed 50K+ restaurant violation records using Python and NLP to cluster high-risk establishments.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag purple">Python</span>
-                        <span class="tech-tag green">NLP</span>
-                        <span class="tech-tag blue">Tableau</span>
-                    </div>
-                    <div class="project-achievement">Policy Impact Achieved</div>
+                <div class="project-card">
+                    <h3>DC Food Safety Analytics</h3>
+                    <p>Analyzed 50K+ restaurant violations using Python and NLP to cluster high-risk establishments.</p>
                 </div>
-
-                <div class="project-card" data-testid="project-card-4">
-                    <div class="project-header">
-                        <i data-lucide="globe" class="project-icon accent-green"></i>
-                        <h3>Sea Level Rise Dashboard</h3>
-                    </div>
-                    <p class="project-description">Built Power BI dashboards with ArcGIS integration for Puerto Rico's infrastructure risk assessment.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag purple">Power BI</span>
-                        <span class="tech-tag green">ArcGIS</span>
-                        <span class="tech-tag blue">Geospatial</span>
-                    </div>
-                    <div class="project-achievement">500+ Assets Analyzed</div>
+                <div class="project-card">
+                    <h3>Sea Level Rise Dashboard</h3>
+                    <p>Built Power BI dashboards with ArcGIS integration for Puerto Rico infrastructure risk assessment.</p>
                 </div>
-
-                <div class="project-card" data-testid="project-card-5">
-                    <div class="project-header">
-                        <i data-lucide="film" class="project-icon accent-blue"></i>
-                        <h3>Movie Recommendation System</h3>
-                    </div>
-                    <p class="project-description">Designed a personalized recommendation system using collaborative filtering and predictive modeling.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag purple">Python</span>
-                        <span class="tech-tag green">Collaborative Filtering</span>
-                        <span class="tech-tag blue">ML</span>
-                    </div>
-                    <div class="project-achievement">88% Accuracy</div>
+                <div class="project-card">
+                    <h3>Movie Recommendation System</h3>
+                    <p>Designed a personalized recommendation system using collaborative filtering and predictive modeling.</p>
                 </div>
-
-                <div class="project-card" data-testid="project-card-6">
-                    <div class="project-header">
-                        <i data-lucide="database" class="project-icon accent-purple"></i>
-                        <h3>Tech Agency Analytics</h3>
-                    </div>
-                    <p class="project-description">Designed data catalog pipeline integrating SQL databases with OpenMetadata for business intelligence.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag purple">SQL</span>
-                        <span class="tech-tag green">OpenMetadata</span>
-                        <span class="tech-tag blue">ETL</span>
-                    </div>
-                    <div class="project-achievement">Data Governance Enabled</div>
+                <div class="project-card">
+                    <h3>Tech Agency Analytics</h3>
+                    <p>Built data catalog pipeline integrating SQL databases with OpenMetadata for business intelligence.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills-section" data-testid="skills-section">
+    <section id="skills" class="skills-section">
         <div class="container">
-            <h2 class="section-title" data-testid="skills-title">Technical Skills</h2>
-            
+            <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
-                <div class="skill-category" data-testid="skill-category-0">
-                    <div class="category-header">
-                        <i data-lucide="code" class="category-icon accent-blue"></i>
-                        <h3>Programming Languages</h3>
-                    </div>
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
                     <div class="skills-list">
                         <div class="skill-item">Python (pandas, NumPy, PySpark)</div>
                         <div class="skill-item">SQL</div>
                         <div class="skill-item">R</div>
                     </div>
                 </div>
-
-                <div class="skill-category" data-testid="skill-category-1">
-                    <div class="category-header">
-                        <i data-lucide="settings" class="category-icon accent-green"></i>
-                        <h3>Data Engineering & ETL Tools</h3>
-                    </div>
+                <div class="skill-category">
+                    <h3>Data Engineering & ETL Tools</h3>
                     <div class="skills-list">
                         <div class="skill-item">Apache Spark</div>
                         <div class="skill-item">Apache Airflow</div>
-                        <div class="skill-item">Apache Kafka</div>
                         <div class="skill-item">Databricks</div>
-                        <div class="skill-item">Hadoop (HDFS, Hive)</div>
-                        <div class="skill-item">Informatica</div>
-                        <div class="skill-item">SSIS</div>
-                        <div class="skill-item">dbt</div>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-testid="skill-category-2">
-                    <div class="category-header">
-                        <i data-lucide="database" class="category-icon accent-purple"></i>
-                        <h3>Data Warehousing & Databases</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">Amazon Redshift</div>
-                        <div class="skill-item">Snowflake</div>
-                        <div class="skill-item">Teradata</div>
-                        <div class="skill-item">PostgreSQL</div>
-                        <div class="skill-item">MySQL</div>
-                        <div class="skill-item">MongoDB</div>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-testid="skill-category-3">
-                    <div class="category-header">
-                        <i data-lucide="cloud" class="category-icon accent-blue"></i>
-                        <h3>Cloud Platforms & Services</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">Azure (Data Factory, Synapse Analytics)</div>
-                        <div class="skill-item">AWS (S3, Lambda, EC2, RDS, Redshift)</div>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-testid="skill-category-4">
-                    <div class="category-header">
-                        <i data-lucide="layout" class="category-icon accent-green"></i>
-                        <h3>Data Modeling & Architecture</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">Star Schema, Snowflake Schema</div>
-                        <div class="skill-item">Dimensional Modeling</div>
-                        <div class="skill-item">Data Lake & Lakehouse Design</div>
-                        <div class="skill-item">OLTP & OLAP</div>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-testid="skill-category-5">
-                    <div class="category-header">
-                        <i data-lucide="git-branch" class="category-icon accent-purple"></i>
-                        <h3>DevOps & CI/CD</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">Git, GitHub</div>
-                        <div class="skill-item">Jenkins</div>
-                        <div class="skill-item">Docker</div>
-                        <div class="skill-item">Kubernetes</div>
-                        <div class="skill-item">Terraform</div>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-testid="skill-category-6">
-                    <div class="category-header">
-                        <i data-lucide="bar-chart-2" class="category-icon accent-blue"></i>
-                        <h3>Business Intelligence & Visualization</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">Tableau</div>
-                        <div class="skill-item">Power BI</div>
-                        <div class="skill-item">Looker</div>
-                        <div class="skill-item">QuickSight</div>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-testid="skill-category-7">
-                    <div class="category-header">
-                        <i data-lucide="repeat" class="category-icon accent-green"></i>
-                        <h3>Workflow Orchestration & Automation</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">Apache Airflow</div>
-                        <div class="skill-item">Prefect</div>
-                        <div class="skill-item">AWS Step Functions</div>
-                        <div class="skill-item">Cron Jobs</div>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-testid="skill-category-8">
-                    <div class="category-header">
-                        <i data-lucide="shield" class="category-icon accent-purple"></i>
-                        <h3>Data Quality & Governance</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">Data Validation & Profiling</div>
-                        <div class="skill-item">Data Lineage</div>
-                        <div class="skill-item">GDPR & HIPAA Compliance</div>
-                        <div class="skill-item">Metadata Management</div>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-testid="skill-category-9">
-                    <div class="category-header">
-                        <i data-lucide="tool" class="category-icon accent-blue"></i>
-                        <h3>Other Tools & Frameworks</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">Jupyter Notebook, VS Code, PyCharm</div>
-                        <div class="skill-item">Excel (Advanced)</div>
-                        <div class="skill-item">REST APIs, JSON, XML</div>
                     </div>
                 </div>
             </div>
@@ -411,12 +164,11 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section" data-testid="contact-section">
+    <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <p>If you’d like to discuss data engineering, AI/ML projects, or potential collaborations, feel free to reach out!</p>
-            
-            <form class="contact-form" data-testid="contact-form">
+            <form class="contact-form">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
