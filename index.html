@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jainam Jagani - Data Engineer & AI/ML Engineer</title>
-    <meta name="description" content="Jainam Jagani - Data Engineer with expertise in ETL, cloud platforms, data pipelines, and analytics.">
-
+    <meta name="description" content="Jainam Jagani - Data Engineer and AI/ML Engineer specializing in data pipelines, machine learning, and scalable engineering solutions.">
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Animated Background Canvas -->
     <canvas id="animatedBackground"></canvas>
-
+    
     <!-- Navigation -->
     <nav id="navigation">
         <div class="nav-container">
@@ -25,184 +25,489 @@
                 <div class="logo" onclick="scrollToSection('home')">JJ</div>
                 
                 <div class="nav-links">
-                    <button onclick="scrollToSection('home')">Home</button>
-                    <button onclick="scrollToSection('about')">About</button>
-                    <button onclick="scrollToSection('education')">Education</button>
-                    <button onclick="scrollToSection('experience')">Experience</button>
-                    <button onclick="scrollToSection('skills')">Skills</button>
-                    <button onclick="scrollToSection('projects')">Projects</button>
-                    <button onclick="scrollToSection('contact')">Contact</button>
+                    <button onclick="scrollToSection('home')" data-testid="nav-home">Home</button>
+                    <button onclick="scrollToSection('about')" data-testid="nav-about">About</button>
+                    <button onclick="scrollToSection('projects')" data-testid="nav-projects">Projects</button>
+                    <button onclick="scrollToSection('skills')" data-testid="nav-skills">Skills</button>
+                    <button onclick="scrollToSection('contact')" data-testid="nav-contact">Contact</button>
                 </div>
                 
                 <div class="nav-actions">
-                    <button class="theme-toggle" onclick="toggleTheme()">
+                    <button class="theme-toggle" onclick="toggleTheme()" data-testid="theme-toggle">
                         <i data-lucide="moon"></i>
                     </button>
-                    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" data-testid="mobile-menu-toggle">
                         <i data-lucide="menu"></i>
                     </button>
                 </div>
             </div>
-
+            
             <!-- Mobile Menu -->
             <div class="mobile-menu" id="mobileMenu">
-                <button onclick="scrollToSection('home')">Home</button>
-                <button onclick="scrollToSection('about')">About</button>
-                <button onclick="scrollToSection('education')">Education</button>
-                <button onclick="scrollToSection('experience')">Experience</button>
-                <button onclick="scrollToSection('skills')">Skills</button>
-                <button onclick="scrollToSection('projects')">Projects</button>
-                <button onclick="scrollToSection('contact')">Contact</button>
+                <button onclick="scrollToSection('home')" data-testid="mobile-nav-home">Home</button>
+                <button onclick="scrollToSection('about')" data-testid="mobile-nav-about">About</button>
+                <button onclick="scrollToSection('projects')" data-testid="mobile-nav-projects">Projects</button>
+                <button onclick="scrollToSection('skills')" data-testid="mobile-nav-skills">Skills</button>
+                <button onclick="scrollToSection('contact')" data-testid="mobile-nav-contact">Contact</button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container hero-content">
-            <div class="profile-container">
-                <img src="Potrait.jpg" alt="Jainam Jagani - Professional Headshot" class="profile-image">
-                <div class="floating-badge badge-1">Python</div>
-                <div class="floating-badge badge-2">SQL</div>
-                <div class="floating-badge badge-3">PySpark</div>
-                <div class="floating-badge badge-4">AWS</div>
-                <div class="floating-badge badge-5">Airflow</div>
-                <div class="floating-badge badge-6">Power BI</div>
-            </div>
-            <h1>Jainam Jagani</h1>
-            <h2>Data Engineer & AI/ML Engineer</h2>
-            <p>Virginia, USA | +1 571-336-0651 | <a href="mailto:jainamrj66@gmail.com">jainamrj66@gmail.com</a> | <a href="https://linkedin.com/in/jainam-jagani" target="_blank">LinkedIn</a> | <a href="https://github.com/JRJ666" target="_blank">Github</a> | <a href="#" target="_blank">Portfolio</a></p>
-            <p>Results-driven Data Engineer with 4 years of experience in designing and implementing scalable data pipelines, cloud-based data warehouses, and ETL workflows. Skilled in Python, SQL, and PySpark with hands-on expertise across Azure and AWS platforms, delivering efficient, reliable, and high-quality data solutions to support business intelligence and analytics.</p>
-            <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="scrollToSection('projects')">View Projects</button>
-                <button class="btn btn-outline" onclick="scrollToSection('contact')">Get In Touch</button>
+    <section id="home" class="hero-section" data-testid="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <!-- Profile photo with floating tech badges -->
+                <div class="profile-container">
+                    <div class="profile-image-container">
+                        <img src="Potrait.jpg" 
+                             alt="Jainam Jagani - Professional Headshot" 
+                             class="profile-image"
+                             data-testid="profile-image">
+                        
+                        <!-- Photo Placeholder with Instructions -->
+                        
+                    </div>
+                    
+                    <!-- Floating skill badges -->
+                    <div class="floating-badge badge-1">Python</div>
+                    <div class="floating-badge badge-2">ML</div>
+                    <div class="floating-badge badge-3">SQL</div>
+                    <div class="floating-badge badge-4">AWS</div>
+                    <div class="floating-badge badge-5">TensorFlow</div>
+                    <div class="floating-badge badge-6">Spark</div>
+                </div>
+
+                <h1 class="hero-title" data-testid="hero-title">
+                    <span class="name-first">Jainam</span> 
+                    <span class="name-last">Jagani</span>
+                </h1>
+                
+                <h2 class="hero-subtitle" data-testid="hero-subtitle">
+                    Data Engineer & AI/ML Engineer
+                </h2>
+                
+                <p class="hero-tagline" data-testid="hero-tagline">
+                    Transforming data into insights with AI, ML, and scalable engineering
+                </p>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('projects')" data-testid="button-view-projects">
+                        View Projects
+                    </button>
+                    <button class="btn btn-outline" onclick="scrollToSection('contact')" data-testid="button-get-in-touch">
+                        Get In Touch
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
+    <section id="about" class="about-section" data-testid="about-section">
         <div class="container">
-            <h2>About Me</h2>
-            <p>I am <strong>Jainam Jagani</strong>, a Data Engineer and AI/ML Engineer with a Master's in <strong>Data Analytics Engineering</strong> from George Mason University. As a <strong>first-generation college graduate</strong>, I am passionate about leveraging data to solve real-world challenges.</p>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education-section">
-        <div class="container">
-            <h2>Education</h2>
-            <ul>
-                <li><strong>Master of Science in Data Analytics Engineering</strong> - George Mason University, Fairfax, Virginia</li>
-                <li><strong>Bachelor of Engineering in Information Technology</strong> - University of Mumbai, Mumbai, India</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> Python, SQL, R</li>
-                <li><strong>Data Engineering & ETL Tools:</strong> Spark, Airflow, Kafka, Databricks, Hadoop, Informatica, SSIS, dbt</li>
-                <li><strong>Data Warehousing & Databases:</strong> Redshift, Snowflake, Teradata, PostgreSQL, MySQL, MongoDB</li>
-                <li><strong>Cloud Platforms:</strong> Azure, AWS</li>
-                <li><strong>BI & Visualization:</strong> Tableau, Power BI, Looker, QuickSight</li>
-                <li><strong>DevOps & CI/CD:</strong> Git, Jenkins, Docker, Kubernetes, Terraform</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Work Experience Section -->
-    <section id="experience" class="experience-section">
-        <div class="container">
-            <h2>Work Experience</h2>
-
-            <div class="experience-item">
-                <h3>Freddie Mac | Data Engineer</h3>
-                <p>McLean, Virginia, USA • Aug 2024 – Present</p>
-                <ul>
-                    <li>Modernized Enterprise Data Lake integrating mortgage origination, servicing, and capital markets data using AWS (S3, Glue, Redshift) and Snowflake.</li>
-                    <li>Designed ETL pipelines in Apache Airflow and AWS Glue, reducing data processing time from 48h → 6h.</li>
-                    <li>Performed data profiling, validation, and reconciliation, fixing 3,000+ inconsistencies during migration from Oracle and Teradata to Snowflake.</li>
-                    <li>Built Tableau dashboards to track data ingestion and quality metrics, reducing manual monitoring by 40%.</li>
-                    <li>Maintained metadata and data lineage using Collibra and Confluence for FHFA & SOX compliance.</li>
-                </ul>
+            <h2 class="section-title" data-testid="about-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-text" data-testid="about-description-1">
+                        I am <strong>Jainam Jagani</strong>, a Data Engineer and AI/ML Engineer with a Master's in 
+                        <strong class="accent-blue">Data Analytical Engineering</strong> from <strong>George Mason University</strong>. 
+                        As a <strong class="accent-green">first-generation college graduate</strong>, I am passionate about leveraging data to solve real-world challenges.
+                    </p>
+                    <p class="about-text" data-testid="about-description-2">
+                        I specialize in <strong class="accent-purple">data engineering pipelines, machine learning, predictive analytics, and geospatial intelligence</strong>, 
+                        with hands-on experience building scalable solutions that turn raw data into actionable insights.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/JRJ666" class="social-link" data-testid="link-github" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/jainam-jagani" class="social-link" data-testid="link-linkedin" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="mailto:jjagani666@gmail.com" class="social-link" data-testid="link-email">
+                            <i data-lucide="mail"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Experience Timeline -->
+                <div class="experience-section">
+                    <h3 class="experience-title" data-testid="experience-title">Experience</h3>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item" data-testid="experience-item-1">
+                            <div class="timeline-dot accent-blue"></div>
+                            <div class="timeline-content">
+                                <h4>Data Engineer</h4>
+                                <p class="company">BulkMagic • Feb 2025 - Present</p>
+                                <p class="description">Managing ETL pipelines for 1M+ records/month, improving delivery KPIs by 15%</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-testid="experience-item-2">
+                            <div class="timeline-dot accent-purple"></div>
+                            <div class="timeline-content">
+                                <h4>Data Analyst</h4>
+                                <p class="company">Puerto Rico Science & Technology • Aug 2024 - Dec 2024</p>
+                                <p class="description">Built Power BI dashboards for disaster planning and infrastructure risk assessment</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-testid="experience-item-3">
+                            <div class="timeline-dot accent-green"></div>
+                            <div class="timeline-content">
+                                <h4>Jr Data Analyst</h4>
+                                <p class="company">AVN Infotech • Jan 2021 - Dec 2022</p>
+                                <p class="description">Improved data quality by 15% and boosted customer retention by 25%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="experience-item">
-                <h3>DMI Finance | Data Engineer</h3>
-                <p>India • Jul 2020 – Dec 2022</p>
-                <ul>
-                    <li>Built cloud-based MSME Loan Data Warehouse on Azure Synapse Analytics, improving reporting speed by 40%.</li>
-                    <li>Automated ETL pipelines in Databricks (PySpark) processing 2M+ loan transactions/day, cutting manual time by 60%.</li>
-                    <li>Designed fact/dimension models for reporting, improving query performance by 35%.</li>
-                    <li>Orchestrated 40+ ETL workflows via Airflow with 99% uptime.</li>
-                    <li>Created Power BI dashboards for MSME loan performance, reducing manual reporting from 6h → <1h.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications-section">
-        <div class="container">
-            <h2>Certifications</h2>
-            <ul>
-                <li>Microsoft Certified: Azure AI Engineer Associate</li>
-                <li>Databricks Certified Databricks Architect</li>
-            </ul>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+    <section id="projects" class="projects-section" data-testid="projects-section">
         <div class="container">
-            <h2>Projects</h2>
+            <h2 class="section-title" data-testid="projects-title">Featured Projects</h2>
+            
             <div class="projects-grid">
-                <div class="project-card">
-                    <h3>HCV Prediction Model</h3>
-                    <p>Classified Hepatitis C progression stages using Random Forest, KNN, and Logistic Regression (96% accuracy).</p>
+                <div class="project-card" data-testid="project-card-1">
+                    <div class="project-header">
+                        <i data-lucide="heart" class="project-icon accent-green"></i>
+                        <h3>HCV Prediction Model</h3>
+                    </div>
+                    <p class="project-description">Built a predictive model to classify Hepatitis C Virus progression stages using Random Forest, KNN, and Logistic Regression.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag purple">R</span>
+                        <span class="tech-tag green">Random Forest</span>
+                        <span class="tech-tag blue">ML</span>
+                    </div>
+                    <div class="project-achievement">96% Accuracy Achieved</div>
                 </div>
-                <div class="project-card">
-                    <h3>NYPD Crime Analytics</h3>
-                    <p>Processed 112K+ arrest records with PySpark & NoSQL; ML models for crime category prediction (90.74% accuracy).</p>
+
+                <div class="project-card" data-testid="project-card-2">
+                    <div class="project-header">
+                        <i data-lucide="trending-up" class="project-icon accent-blue"></i>
+                        <h3>NYPD Crime Analytics</h3>
+                    </div>
+                    <p class="project-description">Processed 112K+ arrest records using PySpark and NoSQL, developing ML models for crime category prediction.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag purple">PySpark</span>
+                        <span class="tech-tag green">Big Data</span>
+                        <span class="tech-tag blue">NoSQL</span>
+                    </div>
+                    <div class="project-achievement">90.74% Prediction Accuracy</div>
                 </div>
-                <div class="project-card">
-                    <h3>DC Food Safety Analytics</h3>
-                    <p>Analyzed 50K+ restaurant violations using Python & NLP; clustered high-risk establishments (policy impact achieved).</p>
+
+                <div class="project-card" data-testid="project-card-3">
+                    <div class="project-header">
+                        <i data-lucide="utensils" class="project-icon accent-purple"></i>
+                        <h3>DC Food Safety Analytics</h3>
+                    </div>
+                    <p class="project-description">Analyzed 50K+ restaurant violation records using Python and NLP to cluster high-risk establishments.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag purple">Python</span>
+                        <span class="tech-tag green">NLP</span>
+                        <span class="tech-tag blue">Tableau</span>
+                    </div>
+                    <div class="project-achievement">Policy Impact Achieved</div>
                 </div>
-                <div class="project-card">
-                    <h3>Sea Level Rise Dashboard</h3>
-                    <p>Built Power BI + ArcGIS dashboards for Puerto Rico infrastructure risk assessment (500+ assets analyzed).</p>
+
+                <div class="project-card" data-testid="project-card-4">
+                    <div class="project-header">
+                        <i data-lucide="globe" class="project-icon accent-green"></i>
+                        <h3>Sea Level Rise Dashboard</h3>
+                    </div>
+                    <p class="project-description">Built Power BI dashboards with ArcGIS integration for Puerto Rico's infrastructure risk assessment.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag purple">Power BI</span>
+                        <span class="tech-tag green">ArcGIS</span>
+                        <span class="tech-tag blue">Geospatial</span>
+                    </div>
+                    <div class="project-achievement">500+ Assets Analyzed</div>
                 </div>
-                <div class="project-card">
-                    <h3>Movie Recommendation System</h3>
-                    <p>Personalized recommendations using collaborative filtering and predictive modeling (88% accuracy).</p>
+
+                <div class="project-card" data-testid="project-card-5">
+                    <div class="project-header">
+                        <i data-lucide="film" class="project-icon accent-blue"></i>
+                        <h3>Movie Recommendation System</h3>
+                    </div>
+                    <p class="project-description">Designed a personalized recommendation system using collaborative filtering and predictive modeling.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag purple">Python</span>
+                        <span class="tech-tag green">Collaborative Filtering</span>
+                        <span class="tech-tag blue">ML</span>
+                    </div>
+                    <div class="project-achievement">88% Accuracy</div>
                 </div>
-                <div class="project-card">
-                    <h3>Tech Agency Analytics</h3>
-                    <p>Integrated SQL data catalog pipelines with OpenMetadata for BI & analytics (data governance enabled).</p>
+
+                <div class="project-card" data-testid="project-card-6">
+                    <div class="project-header">
+                        <i data-lucide="database" class="project-icon accent-purple"></i>
+                        <h3>Tech Agency Analytics</h3>
+                    </div>
+                    <p class="project-description">Designed data catalog pipeline integrating SQL databases with OpenMetadata for business intelligence.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag purple">SQL</span>
+                        <span class="tech-tag green">OpenMetadata</span>
+                        <span class="tech-tag blue">ETL</span>
+                    </div>
+                    <div class="project-achievement">Data Governance Enabled</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section" data-testid="skills-section">
+        <div class="container">
+            <h2 class="section-title" data-testid="skills-title">Technical Skills</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category" data-testid="skill-category-0">
+                    <div class="category-header">
+                        <i data-lucide="code" class="category-icon accent-blue"></i>
+                        <h3>Programming</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item" data-testid="skill-python">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress green" data-level="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-testid="skill-sql">
+                            <div class="skill-info">
+                                <span>SQL</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress blue" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-testid="skill-r">
+                            <div class="skill-info">
+                                <span>R</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress purple" data-level="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-testid="skill-category-1">
+                    <div class="category-header">
+                        <i data-lucide="brain" class="category-icon accent-purple"></i>
+                        <h3>Machine Learning</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item" data-testid="skill-tensorflow">
+                            <div class="skill-info">
+                                <span>TensorFlow</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress green" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-testid="skill-scikit-learn">
+                            <div class="skill-info">
+                                <span>Scikit-learn</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress blue" data-level="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-testid="skill-xgboost">
+                            <div class="skill-info">
+                                <span>XGBoost</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress purple" data-level="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-testid="skill-category-2">
+                    <div class="category-header">
+                        <i data-lucide="settings" class="category-icon accent-green"></i>
+                        <h3>Data Engineering</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item" data-testid="skill-spark-pyspark">
+                            <div class="skill-info">
+                                <span>Spark/PySpark</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress green" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-testid="skill-snowflake">
+                            <div class="skill-info">
+                                <span>Snowflake</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress blue" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-testid="skill-databricks">
+                            <div class="skill-info">
+                                <span>Databricks</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress purple" data-level="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-testid="skill-category-3">
+                    <div class="category-header">
+                        <i data-lucide="cloud" class="category-icon accent-blue"></i>
+                        <h3>Cloud & BI</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item" data-testid="skill-aws">
+                            <div class="skill-info">
+                                <span>AWS</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress green" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-testid="skill-tableau">
+                            <div class="skill-info">
+                                <span>Tableau</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress blue" data-level="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-testid="skill-power-bi">
+                            <div class="skill-info">
+                                <span>Power BI</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress purple" data-level="90"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section" data-testid="contact-section">
         <div class="container">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:jainamrj66@gmail.com">jainamrj66@gmail.com</a></p>
-            <p>Phone: +1 571-336-0651</p>
-            <p>Location: Virginia, USA</p>
-            <p><a href="https://linkedin.com/in/jainam-jagani" target="_blank">LinkedIn</a> | <a href="https://github.com/JRJ666" target="_blank">Github</a> | <a href="#" target="_blank">Portfolio</a></p>
+            <h2 class="section-title" data-testid="contact-title">Get In Touch</h2>
+            
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-intro">
+                        <h3 data-testid="contact-subtitle">Let's Connect</h3>
+                        <p data-testid="contact-description">
+                            I'm always interested in discussing new opportunities, collaborations, or innovative data engineering projects. 
+                            Feel free to reach out!
+                        </p>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item" data-testid="contact-email">
+                            <div class="contact-icon blue">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div>
+                                <p class="contact-label">Email</p>
+                                <p class="contact-value">jjagani666@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item" data-testid="contact-phone">
+                            <div class="contact-icon green">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <p class="contact-label">Phone</p>
+                                <p class="contact-value">(571) 574-2372</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item" data-testid="contact-location">
+                            <div class="contact-icon purple">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <p class="contact-label">Location</p>
+                                <p class="contact-value">Ashburn, VA / Willing to Relocate</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <a href="https://github.com/JRJ666" class="social-btn" data-testid="contact-github" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/jainam-jagani" class="social-btn" data-testid="contact-linkedin" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form class="contact-form" data-testid="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required data-testid="input-name" placeholder="Your Name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required data-testid="input-email" placeholder="your.email@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" data-testid="input-subject" placeholder="Project Discussion">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="4" required data-testid="textarea-message" placeholder="Tell me about your project or opportunity..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full" data-testid="button-send-message">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer" data-testid="footer">
         <div class="container">
-            <p>© 2025 Jainam Jagani. Built with passion for data and innovation.</p>
+            <p data-testid="footer-text">© 2024 Jainam Jagani. Built with passion for data and innovation.</p>
         </div>
     </footer>
 
