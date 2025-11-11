@@ -169,10 +169,19 @@ function initializeNavigation() {
 function scrollToSection(sectionId) {
     const element = document.getElementById(sectionId);
     if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        const headerOffset = 100; // height of navbar
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+
         closeMobileMenu();
     }
 }
+
 
 function toggleTheme() {
     isDarkMode = !isDarkMode;
