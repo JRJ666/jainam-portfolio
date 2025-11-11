@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jainam Jagani - Data Engineer</title>
+    <title>Jainam Jagani - Data Engineer & AI/ML Engineer</title>
     <meta name="description" content="Jainam Jagani - Data Engineer with expertise in ETL, cloud platforms, data pipelines, and analytics.">
 
     <!-- Google Fonts -->
@@ -15,32 +15,76 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Animated Background Canvas -->
+    <canvas id="animatedBackground"></canvas>
+
     <!-- Navigation -->
     <nav id="navigation">
         <div class="nav-container">
             <div class="nav-content">
                 <div class="logo" onclick="scrollToSection('home')">JJ</div>
+                
                 <div class="nav-links">
                     <button onclick="scrollToSection('home')">Home</button>
                     <button onclick="scrollToSection('about')">About</button>
                     <button onclick="scrollToSection('education')">Education</button>
                     <button onclick="scrollToSection('experience')">Experience</button>
                     <button onclick="scrollToSection('skills')">Skills</button>
+                    <button onclick="scrollToSection('projects')">Projects</button>
                     <button onclick="scrollToSection('contact')">Contact</button>
                 </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" onclick="toggleTheme()">
+                        <i data-lucide="moon"></i>
+                    </button>
+                    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <button onclick="scrollToSection('home')">Home</button>
+                <button onclick="scrollToSection('about')">About</button>
+                <button onclick="scrollToSection('education')">Education</button>
+                <button onclick="scrollToSection('experience')">Experience</button>
+                <button onclick="scrollToSection('skills')">Skills</button>
+                <button onclick="scrollToSection('projects')">Projects</button>
+                <button onclick="scrollToSection('contact')">Contact</button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Jainam Jagani</h1>
-                <h2>Data Engineer</h2>
-                <p>Virginia, USA | +1 571-336-0651 | <a href="mailto:jainamrj66@gmail.com">jainamrj66@gmail.com</a> | <a href="https://linkedin.com/in/jainam-jagani" target="_blank">LinkedIn</a> | <a href="https://github.com/JRJ666" target="_blank">Github</a> | <a href="#" target="_blank">Portfolio</a></p>
-                <p>Results-driven Data Engineer with 4 years of experience in designing and implementing scalable data pipelines, cloud-based data warehouses, and ETL workflows. Skilled in Python, SQL, and PySpark with hands-on expertise across Azure and AWS platforms, delivering efficient, reliable, and high-quality data solutions to support business intelligence and analytics.</p>
+        <div class="container hero-content">
+            <div class="profile-container">
+                <img src="Potrait.jpg" alt="Jainam Jagani - Professional Headshot" class="profile-image">
+                <div class="floating-badge badge-1">Python</div>
+                <div class="floating-badge badge-2">SQL</div>
+                <div class="floating-badge badge-3">PySpark</div>
+                <div class="floating-badge badge-4">AWS</div>
+                <div class="floating-badge badge-5">Airflow</div>
+                <div class="floating-badge badge-6">Power BI</div>
             </div>
+            <h1>Jainam Jagani</h1>
+            <h2>Data Engineer & AI/ML Engineer</h2>
+            <p>Virginia, USA | +1 571-336-0651 | <a href="mailto:jainamrj66@gmail.com">jainamrj66@gmail.com</a> | <a href="https://linkedin.com/in/jainam-jagani" target="_blank">LinkedIn</a> | <a href="https://github.com/JRJ666" target="_blank">Github</a> | <a href="#" target="_blank">Portfolio</a></p>
+            <p>Results-driven Data Engineer with 4 years of experience in designing and implementing scalable data pipelines, cloud-based data warehouses, and ETL workflows. Skilled in Python, SQL, and PySpark with hands-on expertise across Azure and AWS platforms, delivering efficient, reliable, and high-quality data solutions to support business intelligence and analytics.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('projects')">View Projects</button>
+                <button class="btn btn-outline" onclick="scrollToSection('contact')">Get In Touch</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am <strong>Jainam Jagani</strong>, a Data Engineer and AI/ML Engineer with a Master's in <strong>Data Analytics Engineering</strong> from George Mason University. As a <strong>first-generation college graduate</strong>, I am passionate about leveraging data to solve real-world challenges.</p>
         </div>
     </section>
 
@@ -50,7 +94,7 @@
             <h2>Education</h2>
             <ul>
                 <li><strong>Master of Science in Data Analytics Engineering</strong> - George Mason University, Fairfax, Virginia</li>
-                <li><strong>Bachelor of Engineering in Information Technology</strong> - University of Mumbai, Mumbai, Maharashtra, India</li>
+                <li><strong>Bachelor of Engineering in Information Technology</strong> - University of Mumbai, Mumbai, India</li>
             </ul>
         </div>
     </section>
@@ -60,16 +104,12 @@
         <div class="container">
             <h2>Skills</h2>
             <ul>
-                <li><strong>Programming Languages:</strong> Python (pandas, NumPy, PySpark), SQL, R</li>
-                <li><strong>Data Engineering & ETL Tools:</strong> Apache Spark, Apache Airflow, Apache Kafka, Databricks, Hadoop (HDFS, Hive), Informatica, SSIS, dbt</li>
-                <li><strong>Data Warehousing & Databases:</strong> Amazon Redshift, Snowflake, Teradata, PostgreSQL, MySQL, MongoDB</li>
-                <li><strong>Cloud Platforms & Services:</strong> Azure (Data Factory, Synapse Analytics), AWS (S3, Lambda, EC2, RDS, Redshift)</li>
-                <li><strong>Data Modeling & Architecture:</strong> Star Schema, Snowflake Schema, Dimensional Modeling, Data Lake & Lakehouse Design, OLTP & OLAP</li>
-                <li><strong>DevOps & CI/CD:</strong> Git, GitHub, Jenkins, Docker, Kubernetes, Terraform</li>
-                <li><strong>Business Intelligence & Visualization:</strong> Tableau, Power BI, Looker, QuickSight</li>
-                <li><strong>Workflow Orchestration & Automation:</strong> Apache Airflow, Prefect, AWS Step Functions, Cron Jobs</li>
-                <li><strong>Data Quality & Governance:</strong> Data Validation, Data Profiling, Data Lineage, GDPR & HIPAA Compliance, Metadata Management</li>
-                <li><strong>Other Tools & Frameworks:</strong> Jupyter Notebook, VS Code, PyCharm, Excel (Advanced), REST APIs, JSON, XML</li>
+                <li><strong>Programming Languages:</strong> Python, SQL, R</li>
+                <li><strong>Data Engineering & ETL Tools:</strong> Spark, Airflow, Kafka, Databricks, Hadoop, Informatica, SSIS, dbt</li>
+                <li><strong>Data Warehousing & Databases:</strong> Redshift, Snowflake, Teradata, PostgreSQL, MySQL, MongoDB</li>
+                <li><strong>Cloud Platforms:</strong> Azure, AWS</li>
+                <li><strong>BI & Visualization:</strong> Tableau, Power BI, Looker, QuickSight</li>
+                <li><strong>DevOps & CI/CD:</strong> Git, Jenkins, Docker, Kubernetes, Terraform</li>
             </ul>
         </div>
     </section>
@@ -78,32 +118,28 @@
     <section id="experience" class="experience-section">
         <div class="container">
             <h2>Work Experience</h2>
+
             <div class="experience-item">
                 <h3>Freddie Mac | Data Engineer</h3>
                 <p>McLean, Virginia, USA • Aug 2024 – Present</p>
                 <ul>
                     <li>Modernized Enterprise Data Lake integrating mortgage origination, servicing, and capital markets data using AWS (S3, Glue, Redshift) and Snowflake.</li>
-                    <li>Created detailed source-to-target mappings for over 25 legacy data sources.</li>
-                    <li>Designed ETL pipelines in Apache Airflow and AWS Glue, reducing data processing time from 48 hours to 6 hours.</li>
-                    <li>Performed data profiling, validation, and reconciliation, fixing over 3,000 inconsistencies during migration from Oracle and Teradata to Snowflake.</li>
-                    <li>Implemented data quality framework using Great Expectations and AWS Glue Data Catalog, improving dataset reliability by 30%.</li>
-                    <li>Built Tableau dashboards for data ingestion and quality metrics, reducing manual monitoring by 40%.</li>
-                    <li>Maintained metadata and data lineage in Collibra and Confluence to ensure compliance with FHFA and SOX standards.</li>
-                    <li>Collaborated in Agile sprints achieving 98% on-time release across project cycles.</li>
+                    <li>Designed ETL pipelines in Apache Airflow and AWS Glue, reducing data processing time from 48h → 6h.</li>
+                    <li>Performed data profiling, validation, and reconciliation, fixing 3,000+ inconsistencies during migration from Oracle and Teradata to Snowflake.</li>
+                    <li>Built Tableau dashboards to track data ingestion and quality metrics, reducing manual monitoring by 40%.</li>
+                    <li>Maintained metadata and data lineage using Collibra and Confluence for FHFA & SOX compliance.</li>
                 </ul>
             </div>
+
             <div class="experience-item">
                 <h3>DMI Finance | Data Engineer</h3>
                 <p>India • Jul 2020 – Dec 2022</p>
                 <ul>
-                    <li>Built cloud-based MSME Loan Data Warehouse on Azure Synapse Analytics, improving data accessibility and reporting speed by 40%.</li>
-                    <li>Developed automated ETL pipelines in Azure Databricks (PySpark), processing 2M+ daily loan transactions, reducing manual handling time by 60%.</li>
-                    <li>Set up Azure Data Factory workflows to transfer data from SQL Server and partner APIs into Azure Data Lake, ensuring consistency and traceability.</li>
-                    <li>Designed fact and dimension models in Synapse to support reporting and analytics, improving query performance by 35%.</li>
-                    <li>Orchestrated ETL jobs using Apache Airflow, automating 40+ recurring workflows with 99% uptime.</li>
-                    <li>Implemented data quality layer with SQL and Great Expectations, reducing discrepancies in reporting by 45%.</li>
-                    <li>Built Power BI dashboards for MSME loan performance and partner effectiveness, reducing manual reporting time from 6 hours to under an hour.</li>
-                    <li>Implemented CI/CD pipelines in Azure DevOps, automating Databricks notebook deployments and improving release reliability by 50%.</li>
+                    <li>Built cloud-based MSME Loan Data Warehouse on Azure Synapse Analytics, improving reporting speed by 40%.</li>
+                    <li>Automated ETL pipelines in Databricks (PySpark) processing 2M+ loan transactions/day, cutting manual time by 60%.</li>
+                    <li>Designed fact/dimension models for reporting, improving query performance by 35%.</li>
+                    <li>Orchestrated 40+ ETL workflows via Airflow with 99% uptime.</li>
+                    <li>Created Power BI dashboards for MSME loan performance, reducing manual reporting from 6h → <1h.</li>
                 </ul>
             </div>
         </div>
@@ -120,6 +156,39 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>HCV Prediction Model</h3>
+                    <p>Classified Hepatitis C progression stages using Random Forest, KNN, and Logistic Regression (96% accuracy).</p>
+                </div>
+                <div class="project-card">
+                    <h3>NYPD Crime Analytics</h3>
+                    <p>Processed 112K+ arrest records with PySpark & NoSQL; ML models for crime category prediction (90.74% accuracy).</p>
+                </div>
+                <div class="project-card">
+                    <h3>DC Food Safety Analytics</h3>
+                    <p>Analyzed 50K+ restaurant violations using Python & NLP; clustered high-risk establishments (policy impact achieved).</p>
+                </div>
+                <div class="project-card">
+                    <h3>Sea Level Rise Dashboard</h3>
+                    <p>Built Power BI + ArcGIS dashboards for Puerto Rico infrastructure risk assessment (500+ assets analyzed).</p>
+                </div>
+                <div class="project-card">
+                    <h3>Movie Recommendation System</h3>
+                    <p>Personalized recommendations using collaborative filtering and predictive modeling (88% accuracy).</p>
+                </div>
+                <div class="project-card">
+                    <h3>Tech Agency Analytics</h3>
+                    <p>Integrated SQL data catalog pipelines with OpenMetadata for BI & analytics (data governance enabled).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
@@ -133,8 +202,13 @@
 
     <footer class="footer">
         <div class="container">
-            <p>© 2025 Jainam Jagani. All rights reserved.</p>
+            <p>© 2025 Jainam Jagani. Built with passion for data and innovation.</p>
         </div>
     </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
